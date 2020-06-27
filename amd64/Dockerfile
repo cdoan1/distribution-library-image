@@ -9,6 +9,7 @@ COPY ./registry /bin/registry
 COPY ./config-example.yml /etc/docker/registry/config.yml
 
 VOLUME ["/var/lib/registry"]
+COPY ./data /var/lib/registry/data
 EXPOSE 5000
 
 COPY docker-entrypoint.sh /entrypoint.sh
